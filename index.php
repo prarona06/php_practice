@@ -54,7 +54,35 @@ $z = "$x $y";
 echo $z;
 $x = "Hi, how are you?";
 echo substr($x, 5, -3);
+
+$d = "hello bangladesh";
+$z= substr($d, 5,2);
+echo  $z;
 echo ucfirst($x);
+
+
+
+$y = 'hello_world test_10';
+$arr = explode(' ',$y); #expode  diye string thaka array te convert kora jay
+$arrF = explode('_', $arr[1]);
+print_r($arrF);
+
+
+print_r($arr);
+
+$d = "hello bangladesh";
+$z= substr($d, 5,5);
+
+echo  $z;
+$e = "hello bangladesh";
+$h= substr($d, -2,5);
+echo  $h;
+
+##operators // tarnary operator //single line condition cheack
+$f= 10;
+echo $f == 10 ? "eleven" :"not Ten";
+ #null coletion
+ echo $f ?? 2122;
 ?>
 </body>
 
