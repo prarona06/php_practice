@@ -1,3 +1,5 @@
+<?php declare (strict_types=1); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,8 +138,50 @@ echo '<br>';
   return $r;
  }
  echo rtest(50);
+ echo'<br>';
+ #passing arguments by referance...
+ function passtest(&$p){
+$value = $p;
+return $value;
+ }
+ $num =80;
+ echo passtest($num);
  
+ echo'<br>';
+
+
+ #variadic function (unlimited poriman value pass kora jay)
+ #jkn amra akadhik value assign kori tkn seta array akare jay
+function sum(...$v)
+{
+  $add = 0;
+ foreach ($v as $value){
+  $add += $value;
+ }
+ return $add;
  
+}
+
+echo sum(5,6,9,9,5,40,45);
+
+echo'<br>';
+#strict type // type hinting kora
+function sub (int $n ,int $m)
+{
+  return $n - $m;
+}
+echo sub(10,5);
+echo'<br>';
+function mul (int $n ,int $m) :string
+{
+  $result =$n * $m;
+  return (string) $result;
+}
+echo mul(10,5);
+echo'<br>';
+var_dump(mul(10,5)) ;
+
+
  ?>
 </body>
 
