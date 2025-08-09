@@ -180,6 +180,43 @@ function mul (int $n ,int $m) :string
 echo mul(10,5);
 echo'<br>';
 var_dump(mul(10,5)) ;
+echo'<br>';
+
+#Array......
+//multidimentional array....//nested akare thaka mane array er vitore array
+$multidimentional =[
+  [1,2,3,4,5],
+  [6,7,8,9,10],
+  [11,12,13,14,15],
+  [16,17,18,19,20],
+  [21,22,23,24,25],
+];
+print_r($multidimentional[2][3]);
+echo'<br>';
+print_r($multidimentional[2]);
+echo'<br>';
+
+//associative array......//key value pair akare thake
+$var =[
+  'a'=>1,
+  'b'=>2,
+'c'=>3,
+'d'=>4,
+'e'=>5,
+'f'=>6,
+'g'=>7,
+'h'=>8,
+
+
+];
+if (array_key_exists ('a',$var)){
+  echo $var['a'];
+  echo'<br>';
+print_r(array_keys($var));
+ echo'<br>';
+ print_r(array_values($var));
+
+}
 
 
  ?>
